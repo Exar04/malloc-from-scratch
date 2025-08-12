@@ -1,9 +1,14 @@
+CFLAGS = -Wall -Wextra -std=c11 -pedantic  -g
 build:
 	@echo "Building the project..."
-	@gcc -o program main.c 
+	@cc $(CFLAGS) -o heap main.c 
+	@echo "\n"
+	@echo "_______________________"
+	@echo "\n"
+	@./heap
 
 run:
-	@./program
+	@./heap
 
 clean:
-	@rm program
+	@rm heap
